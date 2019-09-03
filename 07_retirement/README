@@ -5,7 +5,6 @@
  
  1. Create a file called "retirement.c".  Include the usual header
     files (stdlib.h and stdio.h) at the top.
-
  2. We're going to model both savings (while working) and expenditure
     (while retired).  It turns out that both of these require the
     same basic information, so we will make a struct to represent that.
