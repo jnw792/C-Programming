@@ -40,12 +40,13 @@ void retirement (int startAge,    //in months
   calculation(startAge + working.months, initial, retired);
 }
 
-/*
+
 int main (void){
   
   retire_info working = {489, 1000, 0.045/12};
   retire_info retired = {384, -4000, 0.01/12};
   retirement(327, 21345, working, retired);
-  
+
+  return EXIT_SUCCESS;
 }
-*/
+
