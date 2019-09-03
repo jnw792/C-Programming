@@ -15,7 +15,7 @@ double calculation(int startAge, double balance, retire_info info){
   year = startAge / 12;
   month = startAge % 12;
 
-  for(int i = info.months; i >= 0; --i){
+  for(int i = info.months; i > 0; --i){
     printf("Age %3d month %2d you have $%.2lf\n", year, month, balance);
     balance = (1.0 + info.rate_of_return) * balance + info.contribution;
     if(++month == 12){
