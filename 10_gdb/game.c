@@ -28,6 +28,7 @@ int main(void) {
   for (int i = 0; i <= 5678; i++) {
     total = total ^ getOtherSN(i);
   }
+
   printf("Ok, time for round 2. I have another secret number.\n");
   printf("Your guess:\n");
   if(fgets(buffer, 1024, stdin) == NULL) {
