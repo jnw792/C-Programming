@@ -1,28 +1,13 @@
-Grading at Sun Sep  8 00:45:25 UTC 2019
+Grading at Sun Sep  8 00:54:14 UTC 2019
 Compiling cards.c
-cards.c: In function ‘assert_card_valid’:
-cards.c:35:1: error: ISO C forbids nested functions [-Werror=pedantic]
- const char * ranking_to_string(hand_ranking_t r) {
- ^
-cards.c:60:1: error: ISO C forbids nested functions [-Werror=pedantic]
- char value_letter(card_t c) {
- ^
-cards.c:85:1: error: ISO C forbids nested functions [-Werror=pedantic]
- char suit_letter(card_t c) {
- ^
-cards.c:110:1: error: ISO C forbids nested functions [-Werror=pedantic]
- void print_card(card_t c) {
- ^
-cards.c:125:1: error: ISO C forbids nested functions [-Werror=pedantic]
- card_t card_from_letters(char value_let, char suit_let) {
- ^
-cards.c:193:1: error: ISO C forbids nested functions [-Werror=pedantic]
- card_t card_from_num(unsigned c) {
- ^
-cards.c:198:1: error: expected declaration or statement at end of input
- }
- ^
-cc1: all warnings being treated as errors
+cards.c: In function ‘card_from_letters’:
+cards.c:136:3: error: ‘xcase’ undeclared (first use in this function)
+   xcase 'd' :{temp.suit = DIAMONDS ;  break;}
+   ^
+cards.c:136:3: note: each undeclared identifier is reported only once for each function it appears in
+cards.c:136:9: error: expected ‘;’ before 'd'
+   xcase 'd' :{temp.suit = DIAMONDS ;  break;}
+         ^
 Could not compile your card.c!
 
 Overall Grade: FAILED
