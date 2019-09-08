@@ -13,16 +13,12 @@
 */
 
 void assert_card_valid(card_t c) {
-  int cond1,cond2;
-  cond1=(c.value >=2 )&&(c.value <= VALUE_ACE);
-  cond2=(c.suit ==  SPADES )||(c.suit == CLUBS )||(c.suit ==  HEARTS)||(c.suit == DIAMONDS);
-  assert(cond1 && cond2);
-  /*
+  
   assert((c.value >= 2) && (c.value <= VALUE_ACE));
   assert((c.suit ==  SPADES )||(c.suit == CLUBS )||(c.suit ==  HEARTS)||(c.suit == DIAMONDS));  
   return;
 }
-  */
+  
 
 /*
   This function should convert the
@@ -137,7 +133,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   switch(suit_let){
   case  's'  : {temp.suit =SPADES;  break;}
   case 'h' : {  temp.suit =HEARTS;  break;}
-  case 'd' :{temp.suit = DIAMONDS ;  break;}
+  xcase 'd' :{temp.suit = DIAMONDS ;  break;}
   case  'c':{temp.suit =CLUBS ; break;}
   default: {temp.suit = NUM_SUITS;  break; }}
   assert_card_valid(temp);
