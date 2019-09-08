@@ -118,6 +118,27 @@ void print_card(card_t c) {
 
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
+  switch(value_let){
+  case 'K' : {temp.value= 13;  break;}
+  case '0' : { temp.value= 10;  break;}
+  case 'A' :{ temp.value= 14;  break;}
+  case 'Q' :{temp.value= 12; break;}
+  case 'J' :{temp.value= 11; break;}
+  default :{temp.value=value_let - '0';
+      break;}
+  }
+  
+  switch(suit_let){
+  case  's'  : {temp.suit =SPADES;  break;}
+  case 'h' : {  temp.suit =HEARTS;  break;}
+  case 'd' :{temp.suit = DIAMONDS ;  break;}
+  case  'c':{temp.suit =CLUBS ; break;}
+  default: {temp.suit = NUM_SUITS;  break; }}
+  assert_card_valid(temp);
+  return temp;
+
+}
+  /*
   switch(value_let) {
   case '2' : temp.value = 2; break;
   case '3' : temp.value = 3; break;
@@ -142,7 +163,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   assert_card_valid(temp);
   return temp;
 }
-
+  */ 
 /*
 - card_t card_from_num(unsigned c);
   This function should take a number from 0 (inclusive)
